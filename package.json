@@ -1,0 +1,10 @@
+{
+  "name": "facta-nfse-bh",
+  "description": "Aplicação de testes para emissão de Notas Fiscais eletrônicas",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "xml2js": "*",
+    "xml2json": "*"
+  }
+}
