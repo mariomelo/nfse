@@ -5,5 +5,12 @@
   "private": true,
   "dependencies": {
     "xml-crypto": "*"
+  },
+  main: "job.js",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "scripts": {
+    "start": "nodejs job.js"
   }
 }
