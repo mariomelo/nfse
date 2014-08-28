@@ -1,17 +1,16 @@
 var fs = require('fs');
 
-
 module.exports = {
-  saveXML: function(type, content){
-    writeXML(type, content);
+  saveXML: function(folder, type, content){
+    writeXML(folder, type, content);
   }
 }
 
-var writeXML = function(type, content){
-  var filename = 'respostas/' + type + '_' + getDatePrefix() + ".xml";
-  fs.writeFile(filename, content, function (err) {
+var writeXML = function(folder, type, content){
+    var filename = folder +'/' + type + '_' + getDatePrefix() + ".xml";
+    fs.writeFile(filename, content, function (err) {
     if (err) throw err;
-      console.log('Nota emitida com sucesso!');
+    console.log('Nota emitida com sucesso! Arquivo XML de resposta: ' + filename);
   });
 }
 

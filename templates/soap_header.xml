@@ -1,0 +1,14 @@
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/"><S:Body>
+  <ns2:{{metodo}}Request xmlns:ns2="http://ws.bhiss.pbh.gov.br">
+      
+  <nfseCabecMsg>
+&lt;cabecalho xmlns=&quot;http://www.abrasf.org.br/nfse.xsd&quot; versao=&quot;1.00&quot;&gt;&lt;versaoDados&gt;1.00&lt;/versaoDados&gt;&lt;/cabecalho&gt;
+    </nfseCabecMsg>
+    <nfseDadosMsg>
+      &lt;{{metodo}}Envio xmlns=&quot;http://www.abrasf.org.br/nfse.xsd&quot;&gt;
+        {{dados}}
+      &lt;/{{metodo}}Envio&gt;
+    </nfseDadosMsg>
+    </ns2:{{metodo}}Request>
+  </S:Body>
+</S:Envelope>
