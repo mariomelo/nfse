@@ -11,6 +11,6 @@
     "node": "0.10.x"
   },
   "scripts": {
-    "start": "nodejs job.js"
+    "start": "node job.js"
   }
 }
