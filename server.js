@@ -1,5 +1,6 @@
 var express = require('express');
 var consulta = require('./consulta');
+var cancelamento = require('./cancelamento');
 var app = express();
 
 app.get('/consulta', function(req, res){
@@ -8,11 +9,16 @@ app.get('/consulta', function(req, res){
   });
 });
 
-app.get('/cancelamento', function(req, res){
-  res.send('Nota fiscal cancelada com sucesso!');
+app.get('/cancela', function(req, res){
+  cancelamento.byId(req.param('nfse'), function(response){
+    console.log('Primeiro callback!');
+    cancelamento.getJSONObject(response, function(json){
+      res.json( json );
+    });
+  });
 });
 
-app.get('/geracao', function(req, res){
+app.get('/gera', function(req, res){
   res.send('Nota fiscal gerada com sucesso!');
 });
 

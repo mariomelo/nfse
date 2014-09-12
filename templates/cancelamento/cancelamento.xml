@@ -1,7 +1,7 @@
 <Pedido xmlns="http://www.abrasf.org.br/nfse.xsd">
   <InfPedidoCancelamento Id="pedidoCancelamento">
     <IdentificacaoNfse>
-      <Numero>201400000000004</Numero>
+      <Numero>{{nfse_id}}</Numero>
       <Cnpj>18801297000150</Cnpj>
       <InscricaoMunicipal>09233890010</InscricaoMunicipal>
       <CodigoMunicipio>3106200</CodigoMunicipio>

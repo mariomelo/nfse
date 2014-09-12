@@ -53,19 +53,25 @@ var getJSONObject = function(response_xml, callback){
     var json = {};
     json.ativas = [];
     json.canceladas = [];
+    json.total_ativas = 0;
+    json.total_canceladas = 0;
 
     try{ 
       var listaNfse = result.ConsultarNfseResposta.ListaNfse[0].CompNfse;
       
       for(var i = 0; i < listaNfse.length; i++){
         var nfse_object = listaNfse[i].Nfse[0].InfNfse[0];
-        if(!listaNfse[i].NfseCancelamento)
+        if(!listaNfse[i].NfseCancelamento){
           json.ativas.push (nfse_object);
-        else
+          json.total_ativas += parseFloat(nfse_object.Servico[0].Valores[0].ValorServicos);
+        }
+        else{
           json.canceladas.push (nfse_object);
+          json.total_canceladas +=  parseFloat(nfse_object.Servico[0].Valores[0].ValorServicos);
+        }
       }
     }catch(ex){
-      
+
     }
 
     json.xml = response_xml;

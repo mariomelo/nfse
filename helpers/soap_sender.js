@@ -4,12 +4,12 @@ var xml_writer = require('./xml_writer');
 var htmlescape = require('./htmlescape');
 
 module.exports = {
-  send: function(method, message){
-    send_message(method, message);
+  send: function(method, message, callback){
+    send_message(method, message, callback);
   }
 }
 
-var send_message = function(method, message){
+var send_message = function(method, message, callback){
   var request_options = {
     hostname: 'bhisshomologa.pbh.gov.br',
     port: 443,
@@ -34,10 +34,9 @@ var send_message = function(method, message){
     });
 
     res.on('end', function(){
-   
       response_xml = response_xml.substring(response_xml.indexOf('<outputXML>')+11, response_xml.indexOf('</outputXML>'));
+      callback && callback(response_xml);
       xml_writer.saveXML('respostas', method, htmlescape.unescape(response_xml));
-     
     });
   });
 
