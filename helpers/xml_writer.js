@@ -10,7 +10,6 @@ var writeXML = function(folder, type, content){
     var filename = folder +'/' + type + '_' + getDatePrefix() + ".xml";
     fs.writeFile(filename, content, function (err) {
     if (err) throw err;
-    console.log('Nota emitida com sucesso! Arquivo XML de resposta: ' + filename);
   });
 }
 

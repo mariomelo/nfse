@@ -15,9 +15,9 @@ var send_message = function(method, message){
     port: 443,
     path: '/bhiss-ws/nfse',
     method: 'POST',
-    pfx: fs.readFileSync('certificados/facta.pfx'),
     ca: fs.readFileSync('certificados/ca.pem'),
-    passphrase: 'armstrong',
+    cert: fs.readFileSync('certificados/public_original.pem'),
+    key: fs.readFileSync('certificados/private.pem'),
     rejectUnauthorized: false,
 
     headers:{

@@ -4,13 +4,15 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
-    "xml-crypto": "*"
+    "xml-crypto": "0.1.25",
+    "express": "4.x",
+    "xml2js": "0.4.4"
   },
   "main": "job.js",
   "engines": {
     "node": "0.10.x"
   },
   "scripts": {
-    "start": "node job.js"
+    "start": "node server.js"
   }
 }

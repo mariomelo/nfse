@@ -13,7 +13,7 @@
         &lt;/Prestador&gt;
         &lt;PeriodoEmissao&gt;
             &lt;DataInicial&gt;2014-07-28&lt;/DataInicial&gt;
-            &lt;DataFinal&gt;2014-08-22&lt;/DataFinal&gt;
+            &lt;DataFinal&gt;2014-09-10&lt;/DataFinal&gt;
         &lt;/PeriodoEmissao&gt;
         &lt;/ConsultarNfseEnvio&gt;
       </nfseDadosMsg>
