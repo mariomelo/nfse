@@ -21,7 +21,7 @@ var request_options = {
   }
 }
 
-var getNFSeByData = function(startDate, endDate, callback){
+var getNFSeByData = function(start_date, end_date, callback){
   var req = https.request(request_options, function(res) {
 
     var response_xml = '';
@@ -37,7 +37,10 @@ var getNFSeByData = function(startDate, endDate, callback){
     });
   });
 
-  req.write(fs.readFileSync('templates/consulta/consulta.xml'));
+  var request_content = fs.readFileSync('templates/consulta/consulta.xml').toString();
+  request_content = request_content.replace('{{start_date}}', start_date);
+  request_content = request_content.replace('{{end_date}}', end_date);
+  req.write(request_content);
   req.end();
 
   req.on('error', function(e) {
@@ -51,14 +54,18 @@ var getJSONObject = function(response_xml, callback){
     json.ativas = [];
     json.canceladas = [];
 
-    var listaNfse = result.ConsultarNfseResposta.ListaNfse[0].CompNfse;
-    
-    for(var i = 0; i < listaNfse.length; i++){
-      var nfse_object = listaNfse[i].Nfse[0].InfNfse[0];
-      if(!listaNfse[i].NfseCancelamento)
-        json.ativas.push (nfse_object);
-      else
-        json.canceladas.push (nfse_object);
+    try{ 
+      var listaNfse = result.ConsultarNfseResposta.ListaNfse[0].CompNfse;
+      
+      for(var i = 0; i < listaNfse.length; i++){
+        var nfse_object = listaNfse[i].Nfse[0].InfNfse[0];
+        if(!listaNfse[i].NfseCancelamento)
+          json.ativas.push (nfse_object);
+        else
+          json.canceladas.push (nfse_object);
+      }
+    }catch(ex){
+      
     }
 
     json.xml = response_xml;
@@ -67,7 +74,7 @@ var getJSONObject = function(response_xml, callback){
 }
 
 module.exports = {
-  byData: function(startDate, endDate, callback){
-    return getNFSeByData(startDate, endDate, callback);
+  byData: function(start_date, end_date, callback){
+    return getNFSeByData(start_date, end_date, callback);
   }
 }
