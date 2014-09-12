@@ -16,6 +16,6 @@ app.get('/geracao', function(req, res){
   res.send('Nota fiscal gerada com sucesso!');
 });
 
-var server = app.listen(3000, function() {
+var server = app.listen( process.env.PORT || 3000, function() {
     console.log('Aguardando instruções de NFSE na porta %d', server.address().port);
 });
