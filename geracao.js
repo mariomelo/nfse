@@ -62,12 +62,16 @@ var getJSONObject = function(response_xml, callback){
   xml2js.parseString(htmlescape.unescape(response_xml), function(error, result){
     var json = {};
     json.result = "Falha ao emitir nota";
-    if(result.GerarNfseResposta.Protocolo[0])
-      json.result = "Nota emitida com sucesso";
 
-    json.protocolo = result.GerarNfseResposta.Protocolo[0];
-    json.data_recebimento = result.GerarNfseResposta.DataRecebimento[0];
-    json.numero_nfse = result.GerarNfseResposta.ListaNfse[0].CompNfse[0].Nfse[0].InfNfse[0].Numero[0];
+    try{
+      if(result.GerarNfseResposta.Protocolo[0])
+        json.result = "Nota emitida com sucesso";
+
+      json.protocolo = result.GerarNfseResposta.Protocolo[0];
+      json.data_recebimento = result.GerarNfseResposta.DataRecebimento[0];
+      json.numero_nfse = result.GerarNfseResposta.ListaNfse[0].CompNfse[0].Nfse[0].InfNfse[0].Numero[0];
+    }catch(ex){}
+
     json.xml = response_xml;
     callback( json );
   });
