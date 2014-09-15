@@ -2,6 +2,16 @@
 
 O WebService oferece três rotas com o seguintes serviços:
 
+## Segurança básica
+
+Para garantir a segurança da emissão de notas, o servidor usa autenticação HTTP básica. Apenas um usuário existe:
+
+Usuário: yr4p43po89cc
+Senha: h7gfs04mb3h40yq
+
+Para que as requisições sejam aceitas pelo servidor, a URL base deve ter o seguinte formato: 
+`http://yr4p43po89cc:h7gfs04mb3h40yq@factanfse.herokuapp.com/`
+
 ## Consulta `/consulta` - Método *GET*
 
 Os parâmetros obrigatórios são `startDate` e `endDate`, ambos no formato `YYYY-MM-DD`. Seu JSON de retorno contém:

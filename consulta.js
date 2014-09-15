@@ -6,7 +6,7 @@ var xml2js = require('xml2js');
 
 
 var request_options = {
-  hostname: 'bhisshomologa.pbh.gov.br',
+  hostname: 'bhissdigital.pbh.gov.br',
   port: 443,
   path: '/bhiss-ws/nfse',
   method: 'POST',

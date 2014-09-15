@@ -2,8 +2,20 @@ var express = require('express');
 var consulta = require('./consulta');
 var cancelamento = require('./cancelamento');
 var geracao = require('./geracao');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
+// Authentication module.
+var auth = require('http-auth');
+var basic = auth.basic({
+        realm: "Facta Tecnologia"
+    }, function (username, password, callback) { // Custom authentication method.
+        callback(username === "yr4p43po89cc" && password === "h7gfs04mb3h40yq");
+    }
+);
+
+
 var app = express();
+app.use(auth.connect(basic));
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
