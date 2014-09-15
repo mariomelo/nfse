@@ -1,6 +1,8 @@
 var fs = require('fs');
 var soap = require('./helpers/soap_message');
 var soap_sender = require('./helpers/soap_sender');
+var xml2js = require('xml2js');
+var htmlescape = require('./helpers/htmlescape');
 
 var getNfseDate = function(){
   var date = new Date();
@@ -56,8 +58,19 @@ var emiteNFSE = function(dados, callback){
   soap_sender.send('GerarNfse', soap_message, callback);
 }
 
-var getJSONObject = function(xml, callback){
-  callback( {xml: xml} );
+var getJSONObject = function(response_xml, callback){
+  xml2js.parseString(htmlescape.unescape(response_xml), function(error, result){
+    var json = {};
+    json.result = "Falha ao emitir nota";
+    if(result.GerarNfseResposta.Protocolo[0])
+      json.result = "Nota emitida com sucesso";
+
+    json.protocolo = result.GerarNfseResposta.Protocolo[0];
+    json.data_recebimento = result.GerarNfseResposta.DataRecebimento[0];
+    json.numero_nfse = result.GerarNfseResposta.ListaNfse[0].CompNfse[0].Nfse[0].InfNfse[0].Numero[0];
+    json.xml = response_xml;
+    callback( json );
+  });
 }
 
 module.exports = {

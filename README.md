@@ -36,3 +36,22 @@ Emite a nota fiscal utilizando como parâmetros un JSON enviado no corpo da requ
 * `valor_do_servico`: Bufunfa que vai entrar no nosso bolso
 * `serie`: Número de série ou agrupador da nota. Coisa inútil que só serve para criar categorias de notas emitidas.
 
+Exemplo de JSON que pode ser utilizado para emitir uma NFSE:
+
+```json
+{
+  "e_cnpj": 0,
+  "tomador_nome": "Alysson Mendonça",
+  "tomador_id": "13125528000139",
+  "tomador_municipio": "3106200",
+  "tomador_estado": "MG",
+  "tomador_cep": "31275000",
+  "tomador_bairro": "São José (Pampulha)",
+  "tomador_endereco": "Av. Abrahão Caram",
+  "tomador_numero": "620",
+  "tomador_complemento": "Sala 206",
+  "descricao_servico": "Software para emissão de NFSE online",
+  "valor_do_servico": 12000.35,
+  "serie": "JSON"
+}
+```
