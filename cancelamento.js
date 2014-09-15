@@ -3,7 +3,7 @@ var soap = require('./helpers/soap_message');
 var soap_sender = require('./helpers/soap_sender');
 var xml2js = require('xml2js');
 
-var cancelNFSeByData = function(nfse_id, callback){
+var cancelNFSeByData = function(ambiente_real, nfse_id, callback){
   console.log('Cancelando a nota ' + nfse_id);
   var header = '&lt;CancelarNfseEnvio xmlns=&quot;http://www.abrasf.org.br/nfse.xsd&quot;&gt;';
   var message = fs.readFileSync('templates/cancelamento/cancelamento.xml').toString();
@@ -13,13 +13,12 @@ var cancelNFSeByData = function(nfse_id, callback){
   soap_message = soap_message.replace('&lt;Pedido', header+'&lt;Pedido');
   soap_message = soap_message.replace('&lt;/Pedido&gt;', '&lt;/Pedido&gt;'+footer);
 
-  soap_sender.send('CancelarNfse', soap_message, callback);
+  soap_sender.send(ambiente_real, 'CancelarNfse', soap_message, callback);
 }
 
 var getJSONObject = function(response_xml, callback){
   xml2js.parseString(response_xml, function(error, result){
     var json = {};
-    console.log('Callback!');
     try{ 
       var listaNfse = result.ConsultarNfseResposta.ListaNfse[0].CompNfse;
       
@@ -39,14 +38,13 @@ var getJSONObject = function(response_xml, callback){
     }
 
     json.xml = response_xml;
-    console.log('Callback!');
     callback( json );
   });
 }
 
 module.exports = {
-  byId: function(nfse_id, callback){
-    return cancelNFSeByData(nfse_id, callback);
+  byId: function(ambiente_real, nfse_id, callback){
+    return cancelNFSeByData(ambiente_real, nfse_id, callback);
   },
 
   getJSONObject: function(xml, callback){

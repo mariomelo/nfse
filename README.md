@@ -12,6 +12,18 @@ Senha: h7gfs04mb3h40yq
 Para que as requisições sejam aceitas pelo servidor, a URL base deve ter o seguinte formato: 
 `http://yr4p43po89cc:h7gfs04mb3h40yq@factanfse.herokuapp.com/`
 
+##Ambientes de Homologação e Produção
+
+O sufixo do endereço indica o ambiente que será utilizado para emitir a Nota Fiscal:
+
+* URL de Homologação: `localhost:3000/consulta/teste?startDate=2014-09-01&endDate=2014-09-15`
+* URL de Produção: `localhost:3000/consulta/nfse?startDate=2014-09-01&endDate=2014-09-15`
+
+O sufixo **/nfse** faz com que o ambiente usado seja o de produção, enquanto o sufixo **/teste** faz com que o ambiente utilizado seja o de homologação.
+
+Os sufixos devem ser utilizados sempre e para todos os métodos disponibilizados pelo WebService.
+
+
 ## Consulta `/consulta` - Método *GET*
 
 Os parâmetros obrigatórios são `startDate` e `endDate`, ambos no formato `YYYY-MM-DD`. Seu JSON de retorno contém:

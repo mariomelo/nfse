@@ -21,23 +21,29 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.text());
 
 
-app.get('/consulta', function(req, res){
-  consulta.byData(req.param('startDate'), req.param('endDate'), function(response){
+app.get('/consulta/:ambiente', function(req, res){
+  var ambiente_real = req.param('ambiente') == "nfse";
+  
+  consulta.byData(ambiente_real, req.param('startDate'), req.param('endDate'), function(response){
     res.json(response);
   });
 });
 
-app.get('/cancela', function(req, res){
-  cancelamento.byId(req.param('nfse'), function(response){
+app.get('/cancela/:ambiente', function(req, res){
+  var ambiente_real = req.param('ambiente') == "nfse";
+
+  cancelamento.byId(ambiente_real, req.param('nfse'), function(response){
     cancelamento.getJSONObject(response, function(json){
       res.json( json );
     });
   });
 });
 
-app.post('/gera', function(req, res){
+app.post('/gera/:ambiente', function(req, res){
+  var ambiente_real = req.param('ambiente') == "nfse";
   var dados = JSON.parse(req.body);
-  geracao.emite(dados, function(response){
+
+  geracao.emite(ambiente_real, dados, function(response){
     geracao.getJSONObject(response, function(json){
       res.json( json );
     });

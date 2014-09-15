@@ -48,14 +48,14 @@ var preencheDados = function(rps, dados){
   return rps;
 }
 
-var emiteNFSE = function(dados, callback){
+var emiteNFSE = function(ambiente_real, dados, callback){
   var rps = fs.readFileSync('templates/geracao/rps.xml').toString();
   rps = preencheDados(rps, dados);
   var rps_signature = soap.get_signature_for_element(rps, "InfRps");
   rps = rps.replace('</Rps></ListaRps>', rps_signature+'</Rps></ListaRps>');
 
   var soap_message = soap.get_soap_message('GerarNfse', rps, "LoteRps");
-  soap_sender.send('GerarNfse', soap_message, callback);
+  soap_sender.send(ambiente_real, 'GerarNfse', soap_message, callback);
 }
 
 var getJSONObject = function(response_xml, callback){
@@ -78,8 +78,8 @@ var getJSONObject = function(response_xml, callback){
 }
 
 module.exports = {
-  emite: function(dados, callback){
-    return emiteNFSE(dados, callback);
+  emite: function(ambiente_real, dados, callback){
+    return emiteNFSE(ambiente_real, dados, callback);
   },
 
   getJSONObject: function(xml, callback){

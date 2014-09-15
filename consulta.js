@@ -6,7 +6,7 @@ var xml2js = require('xml2js');
 
 
 var request_options = {
-  hostname: 'bhissdigital.pbh.gov.br',
+  hostname: 'bhisshomologa.pbh.gov.br',
   port: 443,
   path: '/bhiss-ws/nfse',
   method: 'POST',
@@ -21,8 +21,14 @@ var request_options = {
   }
 }
 
-var getNFSeByData = function(start_date, end_date, callback){
+var getNFSeByData = function(ambiente_real, start_date, end_date, callback){
+  if(ambiente_real)
+    request_options.hostname = 'bhissdigital.pbh.gov.br';
+  else
+    request_options.hostname = 'bhisshomologa.pbh.gov.br';
+
   var req = https.request(request_options, function(res) {
+
 
     var response_xml = '';
     res.on('data', function(data) {
@@ -80,7 +86,7 @@ var getJSONObject = function(response_xml, callback){
 }
 
 module.exports = {
-  byData: function(start_date, end_date, callback){
-    return getNFSeByData(start_date, end_date, callback);
+  byData: function(ambiente_real, start_date, end_date, callback){
+    return getNFSeByData(ambiente_real, start_date, end_date, callback);
   }
 }

@@ -4,12 +4,12 @@ var xml_writer = require('./xml_writer');
 var htmlescape = require('./htmlescape');
 
 module.exports = {
-  send: function(method, message, callback){
-    send_message(method, message, callback);
+  send: function(ambiente_real, method, message, callback){
+    send_message(ambiente_real, method, message, callback);
   }
 }
 
-var send_message = function(method, message, callback){
+var send_message = function(ambiente_real, method, message, callback){
   var request_options = {
     hostname: 'bhisshomologa.pbh.gov.br',
     port: 443,
@@ -25,6 +25,11 @@ var send_message = function(method, message, callback){
       "Content-Type" : "text/xml"
     }
   }
+
+  if(ambiente_real)
+    request_options.hostname = 'bhissdigital.pbh.gov.br';
+  else
+    request_options.hostname = 'bhisshomologa.pbh.gov.br';
 
   var req = https.request(request_options, function(res) {
 
