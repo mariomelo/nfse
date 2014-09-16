@@ -39,7 +39,7 @@ var preencheDados = function(rps, dados){
   rps = rps.replace('{{tomador_nome}}', dados.tomador_nome );
 
   rps = rps.replace('{{descricao_servico}}', dados.descricao_servico );
-  rps = rps.replace('{{valor_do_servico}}', dados.valor_do_servico );
+  rps = rps.replace(/\{\{valor_do_servico\}\}/g, dados.valor_do_servico );
   rps = rps.replace('{{serie}}', dados.serie );
 
   rps = rps.replace('{{data_emissao}}', getNfseDate());

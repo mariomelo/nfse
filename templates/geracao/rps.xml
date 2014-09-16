@@ -14,25 +14,17 @@
           </IdentificacaoRps>
           <DataEmissao>{{data_emissao}}</DataEmissao>
           <NaturezaOperacao>1</NaturezaOperacao>
-          <RegimeEspecialTributacao>2</RegimeEspecialTributacao>
           <OptanteSimplesNacional>2</OptanteSimplesNacional>
           <IncentivadorCultural>2</IncentivadorCultural>
           <Status>1</Status>
           <Servico>
             <Valores>
               <ValorServicos>{{valor_do_servico}}</ValorServicos>
-              <ValorDeducoes>0.00</ValorDeducoes>
-              <ValorPis>0.00</ValorPis>
-              <ValorCofins>0.00</ValorCofins>
-              <ValorInss>0.00</ValorInss>
-              <ValorIr>0.00</ValorIr>
-              <ValorCsll>0.00</ValorCsll>
               <IssRetido>2</IssRetido>
               <ValorIss>{{imposto_calculado}}</ValorIss>
-              <OutrasRetencoes>0.00</OutrasRetencoes>
-              <Aliquota>0.02</Aliquota>
-              <DescontoIncondicionado>0.00</DescontoIncondicionado>
-              <DescontoCondicionado>0.00</DescontoCondicionado>
+              <BaseCalculo>{{valor_do_servico}}</BaseCalculo>
+              <Aliquota>0.025</Aliquota>
+              <ValorLiquidoNfse>{{valor_do_servico}}</ValorLiquidoNfse>
             </Valores>
             <ItemListaServico>1.01</ItemListaServico>
             <CodigoTributacaoMunicipio>010100188</CodigoTributacaoMunicipio>
