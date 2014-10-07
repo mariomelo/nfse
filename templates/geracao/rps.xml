@@ -14,7 +14,8 @@
           </IdentificacaoRps>
           <DataEmissao>{{data_emissao}}</DataEmissao>
           <NaturezaOperacao>1</NaturezaOperacao>
-          <OptanteSimplesNacional>2</OptanteSimplesNacional>
+          <RegimeEspecialTributacao>6</RegimeEspecialTributacao>
+          <OptanteSimplesNacional>1</OptanteSimplesNacional>
           <IncentivadorCultural>2</IncentivadorCultural>
           <Status>1</Status>
           <Servico>
