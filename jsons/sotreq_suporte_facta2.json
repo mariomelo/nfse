@@ -1,0 +1,15 @@
+{
+  "e_cnpj": 1,
+  "tomador_nome": "SOTREQ S/A",
+  "tomador_id": "34151100001706",
+  "tomador_municipio": "3118601",
+  "tomador_estado": "MG",
+  "tomador_cep": "32371630",
+  "tomador_bairro": "PEROBAS",
+  "tomador_endereco": "Via Gastão Camargos",
+  "tomador_numero": "850",
+  "tomador_complemento": "-",
+  "descricao_servico": "CORREÇÃO E EVOLUÇÃO DE SISTEMAS MÓVEIS, SISTEMAS WEB e SERVIÇOS DE INTEGRAÇÃO &lt;br&gt; CONTRATO: CT-SQFT01/2015  &lt;br&gt; REFERENTE A: Janeiro/2015. &lt;br&gt; &lt;br&gt; Sistemas contemplados: &lt;br&gt; - Eficiência Logística de Campo Android (ELC-Android) &lt;br&gt; - Inspeção de Máquinas Android (IM-Android) &lt;br&gt; - Camada de integração IM-Android/ ELC-Web &lt;br&gt; &lt;br&gt; PAGAMENTO: Crédito em conta até 04/02/2015 &lt;br&gt; Banco do Brasil (001) &lt;br&gt; Agência: 3491-6 &lt;br&gt; Conta: 37054-1",
+  "valor_do_servico": 13000.00,
+  "serie": "STRQ"
+}
