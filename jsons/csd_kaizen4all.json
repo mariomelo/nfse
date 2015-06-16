@@ -1,0 +1,15 @@
+{
+  "e_cnpj": 1,
+  "tomador_nome": "Kaizen 4 All",
+  "tomador_id": "21975000000187",
+  "tomador_municipio": "2304400",
+  "tomador_estado": "CE",
+  "tomador_cep": "60150150",
+  "tomador_bairro": "ALDEOTA",
+  "tomador_endereco": "R DES LEITE ALBUQUERQUE",
+  "tomador_numero": "635",
+  "tomador_complemento": "Sala 1003",
+  "descricao_servico": "Criação de software utilizado para o acompanhamento do treinamento CSD", 
+  "valor_do_servico": 2480.50,
+  "serie": "GOTO"
+}
