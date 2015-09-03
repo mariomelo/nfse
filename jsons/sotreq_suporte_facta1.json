@@ -1,3 +1,7 @@
+ADICIONAR ALTERAÇÕES PARA:
+CTISS: Customização de Programas (0102-0/02-88)
+Serviço: Programação (1.02)
+
 {
   "e_cnpj": 1,
   "tomador_nome": "SOTREQ S/A",
@@ -9,7 +13,9 @@
   "tomador_endereco": "Via Gastão Camargos",
   "tomador_numero": "850",
   "tomador_complemento": "-",
-  "descricao_servico": "CORREÇÃO E EVOLUÇÃO DE SISTEMAS MÓVEIS, SISTEMAS WEB e SERVIÇOS DE INTEGRAÇÃO &lt;br&gt; CONTRATO: CT-SQFT01/2015  &lt;br&gt; Referente a Agosto/2015. &lt;br&gt; &lt;br&gt; Sistemas contemplados: &lt;br&gt; - Camada de integração ELC-Android/ ELC-Web &lt;br&gt;- Camada de integração ELC-Android/ WorkFlow &lt;br&gt; - Camada de integração ELC-Android/ DBS &lt;br&gt;- Sistema de Gestão de Serviços e Precificação Eletrônica de Serviços (SGS-PES) &lt;br&gt;  &lt;br&gt;  Valor: R$12.810,00  &lt;br&gt; &lt;br&gt; PAGAMENTO: Crédito em conta até 31/08/2015 &lt;br&gt; Banco do Brasil (001) &lt;br&gt;Agência: 3491-6 &lt;br&gt; Conta: 37054-1",
+  "descricao_servico": "CUSTOMIZAÇÃO DE SISTEMAS MÓVEIS, SISTEMAS WEB e SERVIÇOS DE INTEGRAÇÃO &lt;br&gt; CONTRATO: CT-SQFT01/2015  &lt;br&gt; Referente a Setembro/2015. &lt;br&gt; &lt;br&gt; Sistemas contemplados: &lt;br&gt; - Camada de integração ELC-Android/ ELC-Web &lt;br&gt;- Camada de integração ELC-Android/ WorkFlow &lt;br&gt; - Camada de integração ELC-Android/ DBS &lt;br&gt;- Sistema de Gestão de Serviços e Precificação Eletrônica de Serviços (SGS-PES) &lt;br&gt;  &lt;br&gt;  Valor: R$12.810,00  &lt;br&gt; &lt;br&gt; PAGAMENTO: Crédito em conta até 30/09/2015 &lt;br&gt; Banco do Brasil (001) &lt;br&gt;Agência: 3491-6 &lt;br&gt; Conta: 37054-1",
   "valor_do_servico": 12810.00,
   "serie": "STRQ"
 }
+
+NOTA 41
