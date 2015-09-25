@@ -27,8 +27,8 @@
               <Aliquota>0.025</Aliquota>
               <ValorLiquidoNfse>{{valor_do_servico}}</ValorLiquidoNfse>
             </Valores>
-            <ItemListaServico>1.01</ItemListaServico>
-            <CodigoTributacaoMunicipio>010100188</CodigoTributacaoMunicipio>
+            <ItemListaServico>{{item_lista_servico}}</ItemListaServico>
+            <CodigoTributacaoMunicipio>{{codigo_tributacao}}</CodigoTributacaoMunicipio>
             <Discriminacao>{{descricao_servico}}</Discriminacao>
             <CodigoMunicipio>3106200</CodigoMunicipio>
           </Servico>
