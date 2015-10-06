@@ -1,8 +1,3 @@
-ADICIONAR ALTERAÇÕES PARA:
-CTISS: 0107-0/01-88 / Suporte técnico em informática, inclusive instalação, configuração e manutenção de programas de computação e banco de dados 
-
-Serviço: 1.07 / Suporte tecnico em informatica, inclusive instalacao, configuracao e manutencao de programas de computacao e bancos de dados. 
-
 {
   "e_cnpj": 1,
   "tomador_nome": "SOTREQ S/A",
@@ -14,9 +9,9 @@ Serviço: 1.07 / Suporte tecnico em informatica, inclusive instalacao, configura
   "tomador_endereco": "Via Gastão Camargos",
   "tomador_numero": "850",
   "tomador_complemento": "-",
-  "descricao_servico": SUPORTE DE SISTEMAS MÓVEIS, SISTEMAS WEB e SERVIÇOS DE INTEGRAÇÃO &lt;br&gt; CONTRATO: CT-SQFT01/2015  &lt;br&gt; Referente a Agosto/2015. &lt;br&gt; &lt;br&gt; Sistemas contemplados: &lt;br&gt; - Eficiência Logística de Campo Android (ELC-Android) &lt;br&gt; - Inspeção de Máquinas Android (IM-Android) &lt;br&gt; - Camada de integração IM-Android/ ELC-Web &lt;br&gt; &lt;br&gt; Valor: R$13.000,00  &lt;br&gt; &lt;br&gt; PAGAMENTO: Crédito em conta até 30/09/2015 &lt;br&gt; Banco do Brasil (001) &lt;br&gt; Agência: 3491-6 &lt;br&gt; Conta: 37054-1",
+  "item_lista_servico": "1.07",
+  "codigo_tributacao": "10700188",
+  "descricao_servico": SUPORTE DE SISTEMAS MÓVEIS, SISTEMAS WEB e SERVIÇOS DE INTEGRAÇÃO &lt;br&gt; CONTRATO: CT-SQFT01/2015  &lt;br&gt; Referente a Outubro/2015. &lt;br&gt; &lt;br&gt; Sistemas contemplados: &lt;br&gt; - Eficiência Logística de Campo Android (ELC-Android) &lt;br&gt; - Inspeção de Máquinas Android (IM-Android) &lt;br&gt; - Camada de integração IM-Android/ ELC-Web &lt;br&gt; &lt;br&gt; Valor: R$13.000,00  &lt;br&gt; &lt;br&gt; PAGAMENTO: Crédito em conta até 30/10/2015 &lt;br&gt; Banco do Brasil (001) &lt;br&gt; Agência: 3491-6 &lt;br&gt; Conta: 37054-1",
   "valor_do_servico": 13000.00,
   "serie": "STRQ"
 }
-
-Nota 42
