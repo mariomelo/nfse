@@ -38,6 +38,9 @@ var preencheDados = function(rps, dados){
   rps = rps.replace('{{tomador_endereco}}', dados.tomador_endereco );
   rps = rps.replace('{{tomador_nome}}', dados.tomador_nome );
 
+  rps = rps.replace('{{item_lista_servico}}', dados.item_lista_servico );
+  rps = rps.replace('{{codigo_tributacao}}', dados.codigo_tributacao );
+
   rps = rps.replace('{{descricao_servico}}', dados.descricao_servico );
   rps = rps.replace(/\{\{valor_do_servico\}\}/g, dados.valor_do_servico );
   rps = rps.replace('{{serie}}', dados.serie );
